@@ -94,10 +94,15 @@ for i in g.edges(data=True):
     # test["Name"]=i["from"]  
     name[i[0]]=test
 
+if name=={}:
+    st.text("No Products found")
+    stop=1
 name_list=[]
 ratings={}
 for i in name:
   # print(i)
+  if stop==1:
+        break
   ratings[i]=name[i]["Rating"]
   name_list.append(i)
 
@@ -228,8 +233,10 @@ def show(spec):
   if name=={}:
     message_text="No Recommendations for different"+spec
     st.text(message_text)
-    return
+    stop=1
   for i in name:
+    if stop==1:
+        break
     ratings[i]=name[i]["Rating"]
     name_list.append(i)
 
@@ -241,6 +248,8 @@ def show(spec):
 
   brandlist={}
   for i in name_list:
+    if stop==1:
+        break
     if name[i][spec] not in brandlist.keys():
       message_text="Name :"+str(i)
       st.text(message_text)
@@ -283,6 +292,9 @@ def show(spec):
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
       st.text("\n")
+  if stop==1:
+        return
+  stop=2
   message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 products)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
@@ -321,4 +333,10 @@ def show(spec):
 
     # Load HTML file in HTML component for display on Streamlit page
   components.html(HtmlFile.read(), height=600)
-show(spec)
+
+if show(spec)==1:
+    pass
+else:
+    pass
+    
+
