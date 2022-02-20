@@ -49,7 +49,8 @@ for e in edge_data:
     g.add_edge(e[0],e[7],title="Additional Details",color="yellow",length=600,weight=e[4])
     g.add_edge(e[0],e[8],title="Price",color="yellow",length=600,weight=e[4])
 
-query_new=st.text_input("Enter search query separated by space","samsung 4",on_change=st.experimental_rerun())
+query_new=st.text_input("Enter search query separated by space","samsung 4")
+# query_new=st.text_input("Enter search query separated by space","samsung 4",on_change=st.experimental_rerun())
 query=query_new.capitalize()
 query=query.split()
 
