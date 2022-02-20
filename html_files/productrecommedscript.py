@@ -95,16 +95,16 @@ for i in g.edges(data=True):
     name[i[0]]=test
 
 
-
+if name=={}:
+  st.text("No Products found")
+  stop=1
 name_list=[]
 ratings={}
 stop=0
 for i in name:
+  if stop==1:
+    break
   # print(i)
-  if name=={}:
-        st.text("No Products found")
-        stop=1
-        break
   ratings[i]=name[i]["Rating"]
   name_list.append(i)
 
@@ -208,7 +208,7 @@ def show(spec):
     flag=0
     for nbr, datadict in g.adj[i[0]].items():
       for x in fixing_details.keys():
-        if x=="Brand":
+        if x==spec:
           if datadict[0]["title"]==x:
             if fixing_details[x]!=nbr:
               test[x]=nbr
@@ -239,14 +239,14 @@ def show(spec):
 
   name_list=[]
   ratings={}
+  if name=={}:
+    message_text="No Recommendations for different"+spec
+    st.text(message_text)
+    stop=1
+    return(stop)
     
   
   for i in name:
-    if name=={}:
-        message_text="No Recommendations for different"+spec
-        st.text(message_text)
-        stop=1
-        return(stop)
     ratings[i]=name[i]["Rating"]
     name_list.append(i)
 
@@ -341,8 +341,11 @@ def show(spec):
 
     # Load HTML file in HTML component for display on Streamlit page
   components.html(HtmlFile.read(), height=600)
+  return(2)
 
 if show(spec)==1:
+    pass
+else:
     pass
 
     
