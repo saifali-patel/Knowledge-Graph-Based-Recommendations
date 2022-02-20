@@ -112,14 +112,22 @@ for i in name_list:
   if count==0:
     break
   else:
-    st.text("Name :",i)
-    st.text("Brand : ",name[i]["Brand"])
-    st.text("Rating : ",name[i]["Rating"])
-    st.text("RAM : ",name[i]["RAM"])
-    st.text("Processor: ",name[i]["Processor"])
-    st.text("Battery : ",name[i]["Battery"])
-    st.text("Additional Details : ",name[i]["Additional Details"])
-    st.text("Price : ",name[i]["Price"])
+    message_text="Name :"+str(i)
+    st.text(message_text)
+    message_text="Brand : "+str(name[i]["Brand"]))
+    st.text(message_text)
+    message_text="Rating : "+str(name[i]["Rating]))
+    st.text(message_text)
+    message_text="RAM : "+str(name[i]["RAM"]))
+    st.text(message_text)
+    message_text="Processor : "+str(name[i]["Processor"]))
+    st.text(message_text)
+    message_text="Battery : "+str(name[i]["Battery"]))
+    st.text(message_text)
+    message_text="Additional Details : "+str(name[i]["Additional Details"]))
+    st.text(message_text)
+    message_text="Price : "+str(name[i]["Price"]))
+    st.text(message_text)
     count-=1
   st.text()
 
@@ -228,30 +236,48 @@ def show(spec):
   brandlist={}
   for i in name_list:
     if name[i][spec] not in brandlist.keys():
-      st.text("Name :",i)
-      st.text("Brand : ",name[i]["Brand"])
-      brandlist[name[i][spec]]=1
-      st.text("Rating : ",name[i]["Rating"])
-      st.text("RAM : ",name[i]["RAM"])
-      st.text("Processor: ",name[i]["Processor"])
-      st.text("Battery : ",name[i]["Battery"])
-      st.text("Additional Details : ",name[i]["Additional Details"])
-      st.text("Price : ",name[i]["Price"])
+      message_text="Name :"+str(i)
+      st.text(message_text)
+      message_text="Brand : "+str(name[i]["Brand"]))
+      st.text(message_text)
+      brandlist[name[i][spec]]=1                                   
+      message_text="Rating : "+str(name[i]["Rating]))
+      st.text(message_text)
+      message_text="RAM : "+str(name[i]["RAM"]))
+      st.text(message_text)
+      message_text="Processor : "+str(name[i]["Processor"]))
+      st.text(message_text)
+      message_text="Battery : "+str(name[i]["Battery"]))
+      st.text(message_text)
+      message_text="Additional Details : "+str(name[i]["Additional Details"]))
+      st.text(message_text)
+      message_text="Price : "+str(name[i]["Price"]))
+      st.text(message_text)
       st.text()
+                                           
     elif name[i][spec] in brandlist.keys() and brandlist[name[i][spec]]>2:
       pass
     elif name[i][spec] in brandlist.keys() and brandlist[name[i][spec]]>0 :
-      st.text("Name :",i)
-      st.text("Brand : ",name[i]["Brand"])
+      message_text="Name :"+str(i)
+      st.text(message_text)
+      message_text="Brand : "+str(name[i]["Brand"]))
+      st.text(message_text)
       brandlist[name[i][spec]]=brandlist[name[i][spec]]+1
-      st.text("Rating : ",name[i]["Rating"])
-      st.text("RAM : ",name[i]["RAM"])
-      st.text("Processor: ",name[i]["Processor"])
-      st.text("Battery : ",name[i]["Battery"])
-      st.text("Additional Details : ",name[i]["Additional Details"])
-      st.text("Price : ",name[i]["Price"])
+      message_text="Rating : "+str(name[i]["Rating]))
+      st.text(message_text)
+      message_text="RAM : "+str(name[i]["RAM"]))
+      st.text(message_text)
+      message_text="Processor : "+str(name[i]["Processor"]))
+      st.text(message_text)
+      message_text="Battery : "+str(name[i]["Battery"]))
+      st.text(message_text)
+      message_text="Additional Details : "+str(name[i]["Additional Details"]))
+      st.text(message_text)
+      message_text="Price : "+str(name[i]["Price"]))
+      st.text(message_text)
       st.text()
-  st.header("Showing Graph for other recommendations for" ,spec," (Restricted to 90 other products)")
+  message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 other products)"                                         
+  st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
 # set the physics layout of the network
