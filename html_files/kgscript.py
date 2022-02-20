@@ -218,10 +218,10 @@ def show(spec):
               flag=1
               test={}
           # print("Flag is 1")
-          else:
-            test[x]=nbr
-            # print(nbr)
-            test["Rating"]=datadict[0]["weight"]
+            else:
+               test[x]=nbr
+               # print(nbr)
+               test["Rating"]=datadict[0]["weight"]
       
       test[datadict[0]["title"]]=nbr
   
