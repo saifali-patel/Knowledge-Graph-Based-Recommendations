@@ -221,7 +221,7 @@ def show(spec):
   name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
 
-  st.text("****** Showing other recommendations for",spec" ******")
+  st.text("****** Showing other recommendations for",spec," ******")
 
   brandlist={}
   for i in name_list:
