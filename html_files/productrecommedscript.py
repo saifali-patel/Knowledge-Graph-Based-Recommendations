@@ -129,7 +129,7 @@ for i in name_list:
     message_text="Price : "+str(name[i]["Price"])
     st.text(message_text)
     count-=1
-  st.text()
+  st.text("\n")
 
 # for i in name_list:
 #   for j in name_list:
@@ -253,7 +253,7 @@ def show(spec):
       st.text(message_text)
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
-      st.text()
+      st.text("\n")
                                            
     elif name[i][spec] in brandlist.keys() and brandlist[name[i][spec]]>2:
       pass
@@ -275,7 +275,7 @@ def show(spec):
       st.text(message_text)
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
-      st.text()
+      st.text("\n")
   message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 other products)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
