@@ -16,10 +16,7 @@ Original file is located at
     https://colab.research.google.com/drive/1ZxfZUdFzCs6XGllPP5EVOf7ruzmVKSxI
 """
 
-# !pip install streamlit
-# !pip install pyvis
-from pyvis.network import Network
-from IPython.core.display import display, HTML
+
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -27,7 +24,7 @@ import pandas as pd
 import networkx as nx
 from pyvis.network import Network
 
-data=pd.read_csv("/content/drive/MyDrive/ProductsKG/FlipKartCleaned.csv")
+data=pd.read_csv("/data/FlipKartCleaned.csv")
 st.title('Phones Recommendation using Knowledge Graphs')
 
 Name=list(data["Name"])
