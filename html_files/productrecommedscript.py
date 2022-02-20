@@ -116,7 +116,7 @@ for i in name_list:
     st.text(message_text)
     message_text="Brand : "+str(name[i]["Brand"])
     st.text(message_text)
-    message_text="Rating : "+str(name[i]["Rating])
+    message_text="Rating : "+str(name[i]["Rating"])
     st.text(message_text)
     message_text="RAM : "+str(name[i]["RAM"])
     st.text(message_text)
@@ -241,7 +241,7 @@ def show(spec):
       message_text="Brand : "+str(name[i]["Brand"])
       st.text(message_text)
       brandlist[name[i][spec]]=1                                   
-      message_text="Rating : "+str(name[i]["Rating])
+      message_text="Rating : "+str(name[i]["Rating"])
       st.text(message_text)
       message_text="RAM : "+str(name[i]["RAM"])
       st.text(message_text)
@@ -263,7 +263,7 @@ def show(spec):
       message_text="Brand : "+str(name[i]["Brand"])
       st.text(message_text)
       brandlist[name[i][spec]]=brandlist[name[i][spec]]+1
-      message_text="Rating : "+str(name[i]["Rating])
+      message_text="Rating : "+str(name[i]["Rating"])
       st.text(message_text)
       message_text="RAM : "+str(name[i]["RAM"])
       st.text(message_text)
