@@ -98,6 +98,7 @@ for i in g.edges(data=True):
 
 name_list=[]
 ratings={}
+stop=0
 for i in name:
   # print(i)
   if name=={}:
