@@ -106,7 +106,8 @@ name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
 # print(ratings)
 count=st.number_input("Enter how many search results you would like to see: ",5,10,5)
-st.subheader("****** Showing first ",count," results ******")
+message_text="****** Showing first "+count+" results ******"
+st.subheader(message_text)
 for i in name_list:
   if count==0:
     break
