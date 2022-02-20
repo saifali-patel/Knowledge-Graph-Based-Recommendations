@@ -344,7 +344,6 @@ def show(spec):
 
 if show(spec)==1:
     pass
-else:
-    pass
+
     
 
