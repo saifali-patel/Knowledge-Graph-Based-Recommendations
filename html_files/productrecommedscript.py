@@ -183,7 +183,6 @@ components.html(HtmlFile.read(), height=600)
 spec = st.radio(
      "To see other recommendations select what other specification you would like to see",
      ('Brand', 'RAM', 'Battery'))
-show(spec)
 
 def show(spec):
   name={}
@@ -314,3 +313,4 @@ def show(spec):
 
     # Load HTML file in HTML component for display on Streamlit page
   components.html(HtmlFile.read(), height=600)
+show(spec)
