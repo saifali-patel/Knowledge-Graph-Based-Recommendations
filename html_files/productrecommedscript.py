@@ -242,7 +242,7 @@ def show(spec):
     
   
   for i in name:
-     if name=={}:
+    if name=={}:
         message_text="No Recommendations for different"+spec
         st.text(message_text)
         stop=1
