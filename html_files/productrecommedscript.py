@@ -183,7 +183,7 @@ except:
 components.html(HtmlFile.read(), height=600)
 
 spec = st.radio(
-     "To see other recommendations select what other specification you would like to see",
+     "To see other recommendations with different Brand,RAM or Battery capacity.Select the specification below.",
      ('Brand', 'RAM', 'Battery'))
 
 def show(spec):
@@ -224,6 +224,11 @@ def show(spec):
 
   name_list=[]
   ratings={}
+    
+  if name=={}:
+    message_text="No Recommendations for different"+spec
+    st.text(message_text)
+    return
   for i in name:
     ratings[i]=name[i]["Rating"]
     name_list.append(i)
