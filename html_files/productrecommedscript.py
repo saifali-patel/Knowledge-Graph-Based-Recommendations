@@ -240,13 +240,13 @@ def show(spec):
   name_list=[]
   ratings={}
     
-  if name=={}:
-    message_text="No Recommendations for different"+spec
-    st.text(message_text)
-    stop=1
-    return(stop)
-  stop=2
+  
   for i in name:
+     if name=={}:
+        message_text="No Recommendations for different"+spec
+        st.text(message_text)
+        stop=1
+        return(stop)
     ratings[i]=name[i]["Rating"]
     name_list.append(i)
 
