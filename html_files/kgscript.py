@@ -7,7 +7,7 @@ import pandas as pd
 import networkx as nx
 from pyvis.network import Network
 
-data=pd.read_csv("/data/FlipKartCleaned.csv")
+data=pd.read_csv("data/FlipKartCleaned.csv")
 st.title('Phones Recommendation using Knowledge Graphs')
 
 Name=list(data["Name"])
