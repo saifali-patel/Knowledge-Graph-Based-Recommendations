@@ -106,7 +106,7 @@ name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
 # print(ratings)
 count=st.number_input("Enter how many search results you would like to see: ",5,10,5)
-message_text="****** Showing first "+str(count)+" results ******"
+message_text="Showing first "+str(count)+" results "
 st.subheader(message_text)
 for i in name_list:
   if count==0:
@@ -146,7 +146,7 @@ for i in name_list:
 
 # nx.draw(g)
 
-st.header("Showing Graph for all Related Products to the Search query")
+st.header("Showing Graph for all Related Products to the Search query (Restricted to 90 Products)")
 graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
 # set the physics layout of the network
@@ -154,10 +154,10 @@ g1=nx.MultiDiGraph()
 pos= nx.planar_layout(g1)
 
 
-for i in name_list:
+for i in name_list[:90]:
   g1.add_node(i,size=20,color="blue")
 
-for i in name_list:
+for i in name_list[:90]:
   for j in name_list:
     if i!=j:
       g1.add_edge(i,j,title="RelatedProducts",color="red",length=1000)
@@ -236,7 +236,7 @@ def show(spec):
 
   name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
-  message_text="****** Showing other recommendations for"+str(spec)+" ******"
+  message_text=" Showing other recommendations for "+str(spec)
   st.text(message_text)
 
   brandlist={}
@@ -283,7 +283,7 @@ def show(spec):
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
       st.text("\n")
-  message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 other products)"                                         
+  message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 products)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
