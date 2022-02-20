@@ -247,6 +247,8 @@ def show(spec):
     
   
   for i in name:
+    if stop==1:
+        break
     ratings[i]=name[i]["Rating"]
     name_list.append(i)
 
