@@ -25,6 +25,7 @@ Price=list(data["Price"])
 RAM=list(data["RAM"])
 Brand=list(data["Brand"])
 Index=list(data["index"])
+AdditionalDetails=list(data["AdditionalDetails"])
 
 graph = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 g=nx.MultiDiGraph()
