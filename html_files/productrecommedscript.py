@@ -128,6 +128,8 @@ for i in name_list:
     st.text(message_text)
     message_text="Price : "+str(name[i]["Price"])
     st.text(message_text)
+    st.text("\n")
+    st.text("\n")
     count-=1
   st.text("\n")
 
@@ -229,8 +231,8 @@ def show(spec):
 
   name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
-
-  st.text("****** Showing other recommendations for",spec," ******")
+  message_text="****** Showing other recommendations for"+str(spec)+" ******"
+  st.text(message_text)
 
   brandlist={}
   for i in name_list:
@@ -252,6 +254,7 @@ def show(spec):
       st.text(message_text)
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
+      st.text("\n")
       st.text("\n")
                                            
     elif name[i][spec] in brandlist.keys() and brandlist[name[i][spec]]>2:
