@@ -79,6 +79,7 @@ for i in g.edges(data=True):
         if fixing_details[x]!=nbr:
           flag=1
           test={}
+          break
           # print("Flag is 1")
         else:
           # print(x)
@@ -86,7 +87,8 @@ for i in g.edges(data=True):
           test[x]=nbr
           test["Rating"]=datadict[0]["weight"]
       
-    test[datadict[0]["title"]]=nbr
+    if flag!=1:
+      test[datadict[0]["title"]]=nbr
     
   if flag==0:
     # print("Flag is not 1")
