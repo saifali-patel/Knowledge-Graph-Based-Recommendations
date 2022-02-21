@@ -219,7 +219,7 @@ def show(spec):
 
             
         else:
-          test[spec]=nbr
+          test[datadict[0]["title"]]=nbr
           # print(nbr)
           # test["Rating"]=datadict[0]["weight"]
 
