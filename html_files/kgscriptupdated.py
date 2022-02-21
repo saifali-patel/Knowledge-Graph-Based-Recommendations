@@ -113,10 +113,10 @@ for i in name:
 name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
 # print(ratings)
-count=st.number_input("Enter how many search results you would like to see: ",5,10,5)
-# count=5
-message_text="Showing first "+str(count)+" results "
 if stop!=1:
+  count=st.number_input("Enter how many search results you would like to see: ",5,10,5)
+# count=5
+  message_text="Showing first "+str(count)+" results "
   st.subheader(message_text)
 for i in name_list:
   if stop==1:
@@ -157,13 +157,13 @@ for i in name_list:
 
 
 # nx.draw(g)
-
-st.header("Showing Graph for all Related Products to the Search query (Restricted to 90 Products)")
-graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
+if stop==1:
+    st.header("Showing Graph for all Related Products to the Search query (Restricted to 90 Products)")
+    graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
 # set the physics layout of the network
-g1=nx.MultiDiGraph()
-pos= nx.planar_layout(g1)
+    g1=nx.MultiDiGraph()
+    pos= nx.planar_layout(g1)
 
 
 for i in name_list[:90]:
@@ -350,7 +350,8 @@ def show(spec):
   components.html(HtmlFile.read(), height=600)
   return(2)
 
-if show(spec)==1:
-    pass
-else:
-    pass
+if stop!=1:
+    if show(spec)==1:
+      pass
+    else:
+      pass
