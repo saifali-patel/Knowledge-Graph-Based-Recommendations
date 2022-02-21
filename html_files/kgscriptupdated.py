@@ -219,7 +219,12 @@ def show(spec):
 
             
         else:
-          test[datadict[0]["title"]]=nbr
+          if test[datadict[0]["title"]]=nbr:
+              if fixing_details[x]!=nbr:
+                test[x]=nbr
+              else:
+                flag=2
+                break
           # print(nbr)
           # test["Rating"]=datadict[0]["weight"]
 
@@ -252,11 +257,11 @@ def show(spec):
 
   name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
-  message_text=" Showing other recommendations for "+str(spec)
+  message_text=" Showing 10 other recommendations for "+str(spec)+" while keeping other specifications same"
   st.text(message_text)
 
   brandlist={}
-  for i in name_list:
+  for i in name_list[:10]:
     if name[i][spec] not in brandlist.keys():
       message_text="Name :"+str(i)
       st.text(message_text)
@@ -301,7 +306,7 @@ def show(spec):
       st.text("\n")
  
   
-  message_text="Showing Graph for other recommendations for" +spec+" (Restricted to 90 products)"                                         
+  message_text="Showing Graph for other recommendations for " +spec+" (Restricted to 90 products)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
