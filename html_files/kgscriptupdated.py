@@ -116,7 +116,8 @@ name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 count=st.number_input("Enter how many search results you would like to see: ",5,10,5)
 # count=5
 message_text="Showing first "+str(count)+" results "
-st.subheader(message_text)
+if stop!=1:
+  st.subheader(message_text)
 for i in name_list:
   if stop==1:
     break
@@ -197,9 +198,10 @@ if stop!=1:
             HtmlFile = open(f'{path}/pyvis_graph.html', 'r', encoding='utf-8')
 
 # Load HTML file in HTML component for display on Streamlit page
-components.html(HtmlFile.read(), height=600)
-
-spec = st.radio(
+if stop!=1:
+  components.html(HtmlFile.read(), height=600)
+if stop!=1:
+  spec = st.radio(
      "To see other recommendations with different Brand,RAM or Battery capacity.Select the specification below.",
      ('Brand', 'RAM', 'Battery'))
 # spec="Brand"
