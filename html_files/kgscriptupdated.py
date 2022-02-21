@@ -49,7 +49,7 @@ for e in edge_data:
 
 query_new=st.text_input("Enter search query separated by space","samsung 4 gb ram")
 # query_new="samsung"
-# query_new=st.text_input("Enter search query separated by space","samsung 4",on_change=st.experimental_rerun())
+# query_new=st.text_input("Enter search query separated by space","samsung 4 gb",on_change=st.experimental_rerun())
 query=query_new.capitalize()
 query=query.split()
 
@@ -99,7 +99,7 @@ stop=0
 if name=={}:
   st.text("No Products found")
   st.text(" Please check spelling or change specification ")
-  st.text(" To Search please follow this format : 'Brand Specification' for example: 'POCO 4 gb'  ")
+  st.text(" To Search please follow this format : 'Brand Specification' for example: 'POCO 4 gb'or 'Brand' for example: 'Samsung' ")
   stop=1
 
 name_list=[]
@@ -160,7 +160,7 @@ for i in name_list:
 
 # nx.draw(g)
 if stop!=1:
-    st.header("Showing Graph for all Related Products to the Search query (Restricted to 90 Products)")
+    st.header("Showing Graph for all Related Products to the Search query (Showing 90 Related Products due to resource constraints)")
     graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
 # set the physics layout of the network
@@ -204,7 +204,7 @@ if stop!=1:
   components.html(HtmlFile.read(), height=600)
 if stop!=1:
   spec = st.radio(
-     "To see other recommendations with different Brand,RAM or Battery capacity.Select the specification below.",
+     "To see other recommendations with different Brand,RAM or Battery capacity while keeping other specifications same. Select the specification to change.",
      ('Brand', 'RAM', 'Battery'))
 # spec="Brand"
 def show(spec):
@@ -312,7 +312,7 @@ def show(spec):
       st.text("\n")
  
   
-  message_text="Showing Graph for other recommendations for " +spec+" (Restricted to 90 products)"                                         
+  message_text="Showing Graph for other recommendations for " +spec+" (Showing 90 Related Products due to resource constraint)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
