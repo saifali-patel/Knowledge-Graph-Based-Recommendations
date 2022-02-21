@@ -168,7 +168,7 @@ for i in name_list:
 
 # nx.draw(g)
 if stop!=1:
-    st.header("Showing Graph for all Related Products to the Search query (Showing 90 Related Products due to resource constraints)")
+    st.header("Showing Graph for all Related Products to the Search query (Showing Maximum of 90 Related Products due to resource constraints)")
     graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
 # set the physics layout of the network
@@ -322,7 +322,7 @@ def show(spec):
       st.text("******************************************************")
  
   
-  message_text="Showing Graph for other recommendations for " +spec+" (Showing 90 Related Products due to resource constraint)"                                         
+  message_text="Showing Graph for other recommendations for " +spec+" (Showing Maximum of 90 Related Products due to resource constraint)"                                         
   st.header(message_text)
   graph2 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
