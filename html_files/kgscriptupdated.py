@@ -66,7 +66,7 @@ for i in g.edges(data=True):
       fixing_details["Processor"]=i[1]
     if j.isdigit() and i[2]["title"]=="Battery" and (j+" "+"mAh Lithium-ion Battery")==i[1]:
       fixing_details["Battery"]=i[1]
-
+flag_fix=0
 if fixing_details=={}:
   flag_fix=1
 name={}
