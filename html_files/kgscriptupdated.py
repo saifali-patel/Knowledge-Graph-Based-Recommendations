@@ -104,7 +104,8 @@ stop=0
 if name=={}:
   st.subheader("No Products found")
   st.text(" Please check spelling or change specification ")
-  st.text(" To Search please follow this format : 'Brand Specification' for example: 'POCO 4 gb'or 'Brand' for example: 'Samsung' ")
+  st.text(" To Search please follow this format : ")
+  st.text("'Brand Specification' For example: 'POCO 4 gb'or 'Brand' for example: 'Samsung' ")
   stop=1
 
 name_list=[]
@@ -149,6 +150,7 @@ for i in name_list:
     st.text(message_text)
     st.text("\n")
     st.text("\n")
+    st.text("******************************************************")
     count-=1
   st.text("\n")
 
@@ -269,7 +271,7 @@ def show(spec):
   name_list=sorted(name_list, key=lambda x: ratings[x],reverse=True)
 
   message_text=" Showing 10 other recommendations for "+str(spec)+" while keeping other specifications same"
-  st.text(message_text)
+  st.subheader(message_text)
 
   brandlist={}
   for i in name_list[:10]:
@@ -293,6 +295,7 @@ def show(spec):
       st.text(message_text)
       st.text("\n")
       st.text("\n")
+      st.text("******************************************************")
                                            
     elif name[i][spec] in brandlist.keys() and brandlist[name[i][spec]]>2:
       pass
@@ -315,6 +318,7 @@ def show(spec):
       message_text="Price : "+str(name[i]["Price"])
       st.text(message_text)
       st.text("\n")
+      st.text("******************************************************")
  
   
   message_text="Showing Graph for other recommendations for " +spec+" (Showing 90 Related Products due to resource constraint)"                                         
