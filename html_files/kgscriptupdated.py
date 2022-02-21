@@ -12,7 +12,7 @@ import networkx as nx
 from pyvis.network import Network
 
 data=pd.read_csv("data/FlipKartCleaned.csv")
-st.title('Phones Recommendation using Knowledge Graphs BY Saifali Patel')
+st.title('Phones Recommendation using Knowledge Graphs By Saifali Patel')
 
 Name=list(data["Name"])
 Rating=list(data["Rating"])
@@ -47,7 +47,7 @@ for e in edge_data:
     g.add_edge(e[0],e[7],title="Additional Details",color="yellow",length=600,weight=e[4])
     g.add_edge(e[0],e[8],title="Price",color="yellow",length=600,weight=e[4])
 
-query_new=st.text_input("Enter search query separated by space","samsung 4 gb ram")
+query_new=st.text_input("Enter search query separated by space","Samsung 4 gb ram")
 # query_new="samsung"
 # query_new=st.text_input("Enter search query separated by space","samsung 4 gb",on_change=st.experimental_rerun())
 query=query_new.capitalize()
