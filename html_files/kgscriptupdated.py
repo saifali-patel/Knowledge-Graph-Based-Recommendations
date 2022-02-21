@@ -68,6 +68,7 @@ for i in g.edges(data=True):
       fixing_details["Battery"]=i[1]
 
 if fixing_details=={}:
+  flag_fix=1
   st.text("No Phones with this Specifications. Please check your Search query again.")
 name={}
 
@@ -75,7 +76,10 @@ for i in g.edges(data=True):
   test={}
   flag=0
 
+
   for nbr, datadict in g.adj[i[0]].items():
+    if flag_fix==1:
+      break
     for x in fixing_details.keys():
       if datadict[0]["title"]==x:
         if fixing_details[x]!=nbr:
@@ -92,7 +96,7 @@ for i in g.edges(data=True):
     if flag!=1:
       test[datadict[0]["title"]]=nbr
     
-  if flag==0:
+  if flag==0 and flag_fix==0:
     # print("Flag is not 1")
     # test["Name"]=i["from"]  
     name[i[0]]=test
