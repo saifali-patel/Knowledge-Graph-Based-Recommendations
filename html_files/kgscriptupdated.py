@@ -98,6 +98,8 @@ for i in g.edges(data=True):
 stop=0
 if name=={}:
   st.text("No Products found")
+  st.text(" Please check spelling or change specification ")
+  st.text(" To Search please follow this format : 'Brand Specification' for example: 'POCO 4 gb'  ")
   stop=1
 
 name_list=[]
