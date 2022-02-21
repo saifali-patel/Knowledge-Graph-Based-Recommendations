@@ -67,7 +67,7 @@ for i in g.edges(data=True):
     if j.isdigit() and i[2]["title"]=="Battery" and (j+" "+"mAh Lithium-ion Battery")==i[1]:
       fixing_details["Battery"]=i[1]
 
-if fixing_details={}:
+if fixing_details=={}:
   st.text("No Phones with this Specifications. Please check your Search query again.")
 name={}
 
