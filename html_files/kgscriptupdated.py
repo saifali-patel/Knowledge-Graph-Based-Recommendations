@@ -69,7 +69,6 @@ for i in g.edges(data=True):
 
 if fixing_details=={}:
   flag_fix=1
-  st.text("No Phones with this Specifications. Please check your Search query again.")
 name={}
 
 for i in g.edges(data=True):
@@ -103,7 +102,7 @@ for i in g.edges(data=True):
 
 stop=0
 if name=={}:
-  st.text("No Products found")
+  st.subheader("No Products found")
   st.text(" Please check spelling or change specification ")
   st.text(" To Search please follow this format : 'Brand Specification' for example: 'POCO 4 gb'or 'Brand' for example: 'Samsung' ")
   stop=1
