@@ -157,7 +157,7 @@ for i in name_list:
 
 
 # nx.draw(g)
-if stop==1:
+if stop!=1:
     st.header("Showing Graph for all Related Products to the Search query (Restricted to 90 Products)")
     graph1 = Network(height='600px', width='100%', bgcolor='#222222', font_color='white')
 
@@ -248,7 +248,7 @@ def show(spec):
   name_list=[]
   ratings={}
   if name=={}:
-    message_text="No Recommendations for different"+spec
+    message_text="No Recommendations for different "+spec+" while keeping other specifications same"
     st.text(message_text)
     stop=1
     return(stop)
