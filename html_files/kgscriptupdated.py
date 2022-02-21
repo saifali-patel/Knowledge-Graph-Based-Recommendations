@@ -207,7 +207,7 @@ def show(spec):
     test={}
     flag=0
     for nbr, datadict in g.adj[i[0]].items():
-      print("datadict",datadict)
+      # print("datadict",datadict)
       for x in fixing_details.keys():
         if x==spec:
           if datadict[0]["title"]==x:
@@ -219,7 +219,7 @@ def show(spec):
 
             
         else:
-          test[x]=nbr
+          test[spec]=nbr
           # print(nbr)
           # test["Rating"]=datadict[0]["weight"]
 
@@ -235,7 +235,7 @@ def show(spec):
     # test["Name"]=i["from"]
     # print(test)  
       name[i[0]]=test
-  print("Name",name)
+  # print("Name",name)
   name_list=[]
   ratings={}
   if name=={}:
