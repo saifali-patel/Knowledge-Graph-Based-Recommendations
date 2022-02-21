@@ -12,7 +12,7 @@ import networkx as nx
 from pyvis.network import Network
 
 data=pd.read_csv("data/FlipKartCleaned.csv")
-st.title('Phones Recommendation using Knowledge Graphs')
+st.title('Phones Recommendation using Knowledge Graphs BY Saifali Patel')
 
 Name=list(data["Name"])
 Rating=list(data["Rating"])
@@ -209,7 +209,7 @@ if stop!=1:
 
 # Load HTML file in HTML component for display on Streamlit page
 if stop!=1:
-  components.html(HtmlFile.read(), height=600)
+  components.html(HtmlFile.read(), height=700)
 if stop!=1:
   spec = st.radio(
      "To see other recommendations with different Brand,RAM or Battery capacity while keeping other specifications same. Select the specification to change.",
@@ -359,7 +359,7 @@ def show(spec):
     HtmlFile = open(f'{path}/pyvis_graph2.html', 'r', encoding='utf-8')
 
     # Load HTML file in HTML component for display on Streamlit page
-  components.html(HtmlFile.read(), height=600)
+  components.html(HtmlFile.read(), height=700)
   return(2)
 
 if stop!=1:
