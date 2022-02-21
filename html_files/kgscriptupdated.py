@@ -105,7 +105,8 @@ if name=={}:
   st.subheader("No Products found")
   st.text(" Please check spelling or change specification ")
   st.text(" To Search please follow this format : ")
-  st.text("'Brand Specification' For example: 'POCO 4 gb'or 'Brand' for example: 'Samsung' ")
+  st.text("'Brand Specification' For example: 'POCO 4 gb' ")
+  st.text("Or 'Brand' For example: 'Samsung' ")
   stop=1
 
 name_list=[]
