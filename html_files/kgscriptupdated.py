@@ -219,7 +219,7 @@ def show(spec):
 
             
         else:
-          if test[datadict[0]["title"]]==x:
+          if datadict[0]["title"]==x:
               if fixing_details[x]==nbr:
                 test[x]=nbr
               else:
