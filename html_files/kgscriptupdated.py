@@ -48,7 +48,11 @@ for e in edge_data:
     g.add_edge(e[0],e[8],title="Price",color="yellow",length=600,weight=e[4])
 
 st.subheader("Available Brands : Apple , Samsung , Poco , Xiaomi , Mi")
-query_new=st.text_input("Enter search query separated by space","Poco 8 gb ram")
+st.text(" To Search please follow this format : ")
+st.text("'Brand Specification' For example: 'POCO 4 gb' ")
+st.text("Or 'Brand' For example: 'Samsung' ")
+st.text("Or 'Specification' For example: '8 gb ram' ")
+query_new=st.text_input("Enter search query","Poco 8 gb ram")
 # query_new="samsung"
 # query_new=st.text_input("Enter search query separated by space","samsung 4 gb",on_change=st.experimental_rerun())
 query=query_new.capitalize()
@@ -105,9 +109,6 @@ stop=0
 if name=={}:
   st.subheader("No Products found")
   st.text(" Please check spelling or change specification ")
-  st.text(" To Search please follow this format : ")
-  st.text("'Brand Specification' For example: 'POCO 4 gb' ")
-  st.text("Or 'Brand' For example: 'Samsung' ")
   stop=1
 
 name_list=[]
