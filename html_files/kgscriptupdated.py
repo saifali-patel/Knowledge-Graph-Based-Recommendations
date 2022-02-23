@@ -12,7 +12,7 @@ import networkx as nx
 from pyvis.network import Network
 
 data=pd.read_csv("data/FlipKartCleaned.csv")
-st.title('Knowledge Graph Based Recommendations')
+st.title('Knowledge Graph Based Recommendations by Saifali Patel')
 
 Name=list(data["Name"])
 Rating=list(data["Rating"])
